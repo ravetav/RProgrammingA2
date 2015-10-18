@@ -1,7 +1,5 @@
-## This program allows to catch the inverse of the matrix in memory rather than compute it repeatedly
+## This program allows to catch the inverse of the matrix in cache rather than compute it repeatedly
 ## It's created because calculate the inverse of matrix is usually a costly computation
-
-
 
 ###################   makeCacheMatrix   #########################33
 
@@ -24,7 +22,14 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+###################   cacheSolve   #########################33
+
+## The second function in this program is : cacheSolve()
+# This function assumes that the matrix is always invertible.
+# "cacheSolve" returns the inverse of the matrix, but first checks if
+# the inverse has already been computed. If so, it gets the result and skips the
+# computation. If not, it computes the inverse, sets the value in the cache via
+# "setinversa" function.
 
 cacheSolve <- function(x, ...) {
     inversa <- x$getinversa()
@@ -37,3 +42,4 @@ cacheSolve <- function(x, ...) {
     x$setinversa(inversa)
     inversa     ## Return a matrix that is the inverse of 'x' 
 }
+
