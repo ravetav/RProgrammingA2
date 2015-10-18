@@ -1,7 +1,7 @@
 ## This program allows to catch the inverse of the matrix in cache rather than compute it repeatedly
 ## It's created because calculate the inverse of matrix is usually a costly computation
 
-###################   makeCacheMatrix   #########################33
+###################   makeCacheMatrix   #########################
 
 ## The first function: "makeCacheMatrix" contains the following functions:
 # 1.set()= set the value of the matrix
@@ -43,3 +43,25 @@ cacheSolve <- function(x, ...) {
     inversa     ## Return a matrix that is the inverse of 'x' 
 }
 
+
+## Sample run program:
+## > matriz = rbind(matrix(c(1,2,3,4), nrow=2, ncol=2))
+## > x = makeCacheMatrix(matriz)
+## > x$get()
+##       [,1]  [,2]
+## [1,]     1   2 
+## [2,]     3   4
+
+## In the first run there's no value in cache
+## > cacheSolve(x)
+##       [,1]   [,2]
+## [1,]    2    1.5
+## [2,]    1   -0.5
+
+## In the second run the inverse is retrieved from the cache
+## > cacheSolve(x)
+## getting cached data.
+##       [,1]   [,2]
+## [1,]   -2    1.5
+## [2,]    1   -0.5
+##  
