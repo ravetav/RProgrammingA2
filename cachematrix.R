@@ -1,7 +1,15 @@
-## Put comments here that give an overall description of what your
-## functions do
+## This program allows to catch the inverse of the matrix in memory rather than compute it repeatedly
+## It's created because calculate the inverse of matrix is usually a costly computation
 
-## Write a short comment describing this function
+
+
+###################   makeCacheMatrix   #########################33
+
+## The first function: "makeCacheMatrix" contains the following functions:
+# 1.set()= set the value of the matrix
+# 2.get()= get the value of the matrix
+# 3.setinversa()= set the value of inverse of the matrix
+# 4.getinversa()= get the value of inverse of the matrix
 
 makeCacheMatrix <- function(x = matrix()) {
     inversa <- NULL
